@@ -96,7 +96,8 @@ if st.button("Split Text"):
                                          chunk_overlap=chunk_overlap,
                                          length_function=length_function)
     elif splitter_choice == "RecursiveCharacter":
-        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, 
+        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size,
+                                                  separators = ["\\n\\n","\\n",". ",", "],
                                                   chunk_overlap=chunk_overlap,
                                          length_function=length_function)
     elif "Language." in splitter_choice:
